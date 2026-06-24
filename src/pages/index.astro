@@ -77,8 +77,10 @@ const year = new Date().getFullYear();
           </div>
         </div>
 
-        <!-- Right column: reserved for a design element to be added later -->
-        <div class="about-accent" style="min-height:320px"></div>
+        <!-- Right column: ambient bolt watermark (no photo/border by design) -->
+        <div class="about-accent" aria-hidden="true" style="position:relative;overflow:hidden;border-radius:16px;min-height:320px">
+          <img src="/assets/bolt.png" alt="" style="position:absolute;right:-4%;top:50%;transform:translateY(-50%);height:120%;width:auto;opacity:.07;pointer-events:none" />
+        </div>
       </div>
     </section>
 
@@ -346,11 +348,3 @@ const year = new Date().getFullYear();
     }
   });
 </script>
-
-<style>
-  /* When the About grid collapses to a single column, the reserved
-     accent column would leave an empty gap — hide it while stacked. */
-  @media (max-width: 760px) {
-    .about-accent { display: none; }
-  }
-</style>
