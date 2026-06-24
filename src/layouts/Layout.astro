@@ -106,6 +106,15 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
           display: flex !important;
         }
       }
+
+      /* About: the bolt is a decorative accent, not content. Once the
+         two-column grid stacks, it would drop below the text as a tall
+         empty block — so hide it on small screens instead. */
+      @media (max-width: 759px) {
+        .about-accent {
+          display: none !important;
+        }
+      }
     </style>
   </head>
   <body>
